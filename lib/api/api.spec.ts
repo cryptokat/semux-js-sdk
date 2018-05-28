@@ -1,13 +1,14 @@
 import { Buffer } from "buffer";
 import chai from 'chai';
+import sleep from "es7-sleep";
 import Long from "long";
 import Key from "../Key";
 import Network from "../Network";
 import Transaction from "../Transaction";
 import TransactionType from "../TransactionType";
 import * as API from "./api";
+import {PendingTransactionType} from "./api";
 import {Configuration} from "./configuration";
-import sleep from "es7-sleep";
 
 const DEV_KEY = Key.importEncodedPrivateKey(Buffer.from(
   "302e020100300506032b657004220420acbd5f2cb2b6053f704376d12df99f2aa163d267a755c7f1d9fe55d2a2dc5405",
@@ -20,7 +21,7 @@ describe("Semux API Test", () => {
   const config = new Configuration({
     username: "user",
     password: "pass",
-    basePath: "http://localhost:5171/v2.0.0"
+    basePath: "http://localhost:5171/v2.1.0"
   });
 
   const api = new API.SemuxApi(config);
@@ -46,6 +47,7 @@ describe("Semux API Test", () => {
 
   it("GET /account", async() => {
     const response = await api.getAccount(DEV_ADDRESS);
+    chai.assert.isTrue(response.success);
   })
 
   it("POST /transaction/raw", async () => {
@@ -68,16 +70,15 @@ describe("Semux API Test", () => {
     await sleep(500);
 
     const responsePendingTxs = await api.getPendingTransactions();
-    const pendingTxs : API.TransactionType[] = [{
-      "blockNumber": "null",
-      "hash": `0x${Buffer.from(tx.getHash().buffer).toString("hex")}`,
-      "type": "TRANSFER",
+    const pendingTxs: API.PendingTransactionType[] = [{
+      "hash": `0x${Buffer.from(tx.getHash().buffer).toString('hex')}`,
+      "type": PendingTransactionType.TypeEnum.TRANSFER,
       "from": `0x${DEV_ADDRESS}`,
       "to": `0x${DEV_ADDRESS}`,
       "value": "1234567890",
       "fee": "5000000",
       "nonce": "0",
-      "timestamp": tx.getTimestamp().toString(10),
+      "timestamp": tx.getTimestamp().toString(),
       "data": `0x${Buffer.from(data.buffer).toString('hex')}`
     }];
     chai.assert.isTrue(responsePendingTxs.success);

@@ -113,8 +113,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#broadcastrawtransaction" class="tsd-kind-icon">broadcast<wbr>Raw<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#composerawtransaction" class="tsd-kind-icon">compose<wbr>Raw<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#createaccount" class="tsd-kind-icon">create<wbr>Account</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#deleteaccount" class="tsd-kind-icon">delete<wbr>Account</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getaccount" class="tsd-kind-icon">get<wbr>Account</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getaccountpendingtransactions" class="tsd-kind-icon">get<wbr>Account<wbr>Pending<wbr>Transactions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getaccounttransactions" class="tsd-kind-icon">get<wbr>Account<wbr>Transactions</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getaccountvotes" class="tsd-kind-icon">get<wbr>Account<wbr>Votes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getblockbyhash" class="tsd-kind-icon">get<wbr>Block<wbr>ByHash</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getblockbynumber" class="tsd-kind-icon">get<wbr>Block<wbr>ByNumber</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getdelegate" class="tsd-kind-icon">get<wbr>Delegate</a></li>
@@ -125,6 +128,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getpeers" class="tsd-kind-icon">get<wbr>Peers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getpendingtransactions" class="tsd-kind-icon">get<wbr>Pending<wbr>Transactions</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getroot" class="tsd-kind-icon">get<wbr>Root</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getsyncingprogress" class="tsd-kind-icon">get<wbr>Syncing<wbr>Progress</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#gettransaction" class="tsd-kind-icon">get<wbr>Transaction</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#gettransactionlimits" class="tsd-kind-icon">get<wbr>Transaction<wbr>Limits</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="semuxapi.html#getvalidators" class="tsd-kind-icon">get<wbr>Validators</a></li>
@@ -156,7 +160,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="baseapi.html">BaseAPI</a>.<a href="baseapi.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L58">lib/api/api.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L58">lib/api/api.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -188,7 +192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3062">lib/api/api.ts:3062</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3641">lib/api/api.ts:3641</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,7 +216,7 @@
 								<li>
 									<h5>node: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Name of the node in host:port format</p>
+										<p>Address of the node in host:port format</p>
 									</div>
 								</li>
 								<li>
@@ -233,7 +237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3074">lib/api/api.ts:3074</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3653">lib/api/api.ts:3653</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -278,7 +282,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3086">lib/api/api.ts:3086</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3665">lib/api/api.ts:3665</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -317,13 +321,13 @@
 					<a name="broadcastrawtransaction" class="tsd-anchor"></a>
 					<h3>broadcast<wbr>Raw<wbr>Transaction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">broadcast<wbr>Raw<wbr>Transaction<span class="tsd-signature-symbol">(</span>raw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/sendtransactionresponse.html" class="tsd-signature-type">SendTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">broadcast<wbr>Raw<wbr>Transaction<span class="tsd-signature-symbol">(</span>raw<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, validateNonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3098">lib/api/api.ts:3098</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3678">lib/api/api.ts:3678</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -347,14 +351,17 @@
 								<li>
 									<h5>raw: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Raw transaction</p>
+										<p>Raw transaction encoded in hexadecimal string.</p>
 									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> validateNonce: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/sendtransactionresponse.html" class="tsd-signature-type">SendTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -368,7 +375,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3117">lib/api/api.ts:3117</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3697">lib/api/api.ts:3697</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -437,22 +444,22 @@
 					<a name="createaccount" class="tsd-anchor"></a>
 					<h3>create<wbr>Account</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Account<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createaccountresponse.html" class="tsd-signature-type">CreateAccountResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Account<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, privateKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createaccountresponse.html" class="tsd-signature-type">CreateAccountResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3129">lib/api/api.ts:3129</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3710">lib/api/api.ts:3710</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates a new account.</p>
+									<p>Creates a new account by generating a new private key or importing an existing private key when parameter &#39;privateKey&#39; is provided.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>summary</dt>
-									<dd><p>Create account</p>
+									<dd><p>Create or import an account</p>
 									</dd>
 									<dt>throws</dt>
 									<dd><p>{RequiredError}</p>
@@ -468,10 +475,58 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> privateKey: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/createaccountresponse.html" class="tsd-signature-type">CreateAccountResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="deleteaccount" class="tsd-anchor"></a>
+					<h3>delete<wbr>Account</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">delete<wbr>Account<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/deleteaccountresponse.html" class="tsd-signature-type">DeleteAccountResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3722">lib/api/api.ts:3722</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes an account from this wallet.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>summary</dt>
+									<dd><p>Delete account</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>{RequiredError}</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>SemuxApi</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Address of the account</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/deleteaccountresponse.html" class="tsd-signature-type">DeleteAccountResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -485,7 +540,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3141">lib/api/api.ts:3141</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3734">lib/api/api.ts:3734</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -521,6 +576,63 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getaccountpendingtransactions" class="tsd-anchor"></a>
+					<h3>get<wbr>Account<wbr>Pending<wbr>Transactions</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>Pending<wbr>Transactions<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getaccountpendingtransactionsresponse.html" class="tsd-signature-type">GetAccountPendingTransactionsResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3748">lib/api/api.ts:3748</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns pending transactions from/to an account.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>summary</dt>
+									<dd><p>Get pending transactions of the account</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>{RequiredError}</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>SemuxApi</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Address of account</p>
+									</div>
+								</li>
+								<li>
+									<h5>from: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Starting range of transactions</p>
+									</div>
+								</li>
+								<li>
+									<h5>to: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Ending range of transactions</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getaccountpendingtransactionsresponse.html" class="tsd-signature-type">GetAccountPendingTransactionsResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="getaccounttransactions" class="tsd-anchor"></a>
 					<h3>get<wbr>Account<wbr>Transactions</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -530,7 +642,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3155">lib/api/api.ts:3155</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3762">lib/api/api.ts:3762</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -578,6 +690,51 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getaccountvotes" class="tsd-anchor"></a>
+					<h3>get<wbr>Account<wbr>Votes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>Votes<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getaccountvotesresponse.html" class="tsd-signature-type">GetAccountVotesResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3774">lib/api/api.ts:3774</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns votes from the account.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>summary</dt>
+									<dd><p>Get account votes</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>{RequiredError}</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>SemuxApi</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Address of account</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getaccountvotesresponse.html" class="tsd-signature-type">GetAccountVotesResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="getblockbyhash" class="tsd-anchor"></a>
 					<h3>get<wbr>Block<wbr>ByHash</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -587,7 +744,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3167">lib/api/api.ts:3167</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3786">lib/api/api.ts:3786</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -632,7 +789,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3179">lib/api/api.ts:3179</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3798">lib/api/api.ts:3798</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -677,7 +834,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3191">lib/api/api.ts:3191</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3810">lib/api/api.ts:3810</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -722,7 +879,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3202">lib/api/api.ts:3202</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3821">lib/api/api.ts:3821</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -761,7 +918,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3213">lib/api/api.ts:3213</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3832">lib/api/api.ts:3832</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -800,7 +957,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3224">lib/api/api.ts:3224</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3843">lib/api/api.ts:3843</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -839,7 +996,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3235">lib/api/api.ts:3235</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3854">lib/api/api.ts:3854</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -878,7 +1035,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3246">lib/api/api.ts:3246</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3865">lib/api/api.ts:3865</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -917,7 +1074,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3257">lib/api/api.ts:3257</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3876">lib/api/api.ts:3876</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -956,7 +1113,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3268">lib/api/api.ts:3268</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3887">lib/api/api.ts:3887</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -983,6 +1140,45 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getsyncingprogress" class="tsd-anchor"></a>
+					<h3>get<wbr>Syncing<wbr>Progress</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Syncing<wbr>Progress<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getsyncingprogressresponse.html" class="tsd-signature-type">GetSyncingProgressResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3898">lib/api/api.ts:3898</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an object with data about the sync status</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>summary</dt>
+									<dd><p>Get syncing progress</p>
+									</dd>
+									<dt>throws</dt>
+									<dd><p>{RequiredError}</p>
+									</dd>
+									<dt>memberof</dt>
+									<dd><p>SemuxApi</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/getsyncingprogressresponse.html" class="tsd-signature-type">GetSyncingProgressResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="gettransaction" class="tsd-anchor"></a>
 					<h3>get<wbr>Transaction</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -992,7 +1188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3280">lib/api/api.ts:3280</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3910">lib/api/api.ts:3910</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1037,12 +1233,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3292">lib/api/api.ts:3292</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3922">lib/api/api.ts:3922</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get minimum fee and maximum size.</p>
+									<p>Returns transaction limitations including minimum transaction fee and maximum transaction size.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>summary</dt>
@@ -1082,12 +1278,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3303">lib/api/api.ts:3303</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3933">lib/api/api.ts:3933</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns a list of validators.</p>
+									<p>Returns a list of validators in Semux addresses.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>summary</dt>
@@ -1121,7 +1317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3316">lib/api/api.ts:3316</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3946">lib/api/api.ts:3946</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1172,16 +1368,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3328">lib/api/api.ts:3328</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3958">lib/api/api.ts:3958</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns all the votes to a delegate</p>
+									<p>Returns all the votes to a delegate as a map of [voter address] =&gt; [votes]</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>summary</dt>
-									<dd><p>Get votes</p>
+									<dd><p>Get a delegate&#39;s votes</p>
 									</dd>
 									<dt>throws</dt>
 									<dd><p>{RequiredError}</p>
@@ -1217,7 +1413,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3339">lib/api/api.ts:3339</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3969">lib/api/api.ts:3969</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1250,13 +1446,13 @@
 					<a name="registerdelegate" class="tsd-anchor"></a>
 					<h3>register<wbr>Delegate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">register<wbr>Delegate<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Delegate<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, validateNonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3353">lib/api/api.ts:3353</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3985">lib/api/api.ts:3985</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1286,11 +1482,17 @@
 								<li>
 									<h5>data: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Delegate name</p>
+										<p>Delegate name in hexadecimal encoded UTF-8 string, 16 bytes of data at maximum</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fee: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> nonce: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> validateNonce: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -1310,7 +1512,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3366">lib/api/api.ts:3366</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L3998">lib/api/api.ts:3998</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1334,13 +1536,13 @@
 								<li>
 									<h5>address: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Signing address</p>
+										<p>Signing address. The address must exist in the wallet.data of this Semux node.</p>
 									</div>
 								</li>
 								<li>
 									<h5>message: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Message to sign</p>
+										<p>Message to sign in UTF-8 string</p>
 									</div>
 								</li>
 								<li>
@@ -1361,7 +1563,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3379">lib/api/api.ts:3379</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L4011">lib/api/api.ts:4011</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1406,13 +1608,13 @@
 					<a name="transfer" class="tsd-anchor"></a>
 					<h3>transfer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">transfer<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">transfer<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, validateNonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3395">lib/api/api.ts:3395</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L4029">lib/api/api.ts:4029</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1436,23 +1638,29 @@
 								<li>
 									<h5>from: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Sending address</p>
+										<p>Sender&#39;s address. The address must exist in the wallet.data of this Semux node.</p>
 									</div>
 								</li>
 								<li>
 									<h5>to: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Receiving address</p>
+										<p>Recipient&#39;s address</p>
 									</div>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Amount of SEM to transfer</p>
+										<p>Amount of SEM to transfer in nano SEM</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fee: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> nonce: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> validateNonce: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <span class="tsd-signature-type">string</span></h5>
@@ -1469,13 +1677,13 @@
 					<a name="unvote" class="tsd-anchor"></a>
 					<h3>unvote</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">unvote<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">unvote<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, validateNonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3410">lib/api/api.ts:3410</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L4046">lib/api/api.ts:4046</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1499,7 +1707,7 @@
 								<li>
 									<h5>from: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Voting address</p>
+										<p>Voter&#39;s address. The address must exist in the wallet.data of this Semux node.</p>
 									</div>
 								</li>
 								<li>
@@ -1511,11 +1719,17 @@
 								<li>
 									<h5>value: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Vote amount</p>
+										<p>Number of votes in nano SEM</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fee: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> nonce: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> validateNonce: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -1535,7 +1749,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3424">lib/api/api.ts:3424</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L4060">lib/api/api.ts:4060</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1559,13 +1773,13 @@
 								<li>
 									<h5>address: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Address</p>
+										<p>Address of the message signer</p>
 									</div>
 								</li>
 								<li>
 									<h5>message: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Message</p>
+										<p>Message in UTF-8 string</p>
 									</div>
 								</li>
 								<li>
@@ -1586,13 +1800,13 @@
 					<a name="vote" class="tsd-anchor"></a>
 					<h3>vote</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">vote<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">vote<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fee<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, validateNonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/dotransactionresponse.html" class="tsd-signature-type">DoTransactionResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/1d8e3e1/lib/api/api.ts#L3439">lib/api/api.ts:3439</a></li>
+									<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L4077">lib/api/api.ts:4077</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1616,7 +1830,7 @@
 								<li>
 									<h5>from: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Voting address</p>
+										<p>Voter&#39;s address. The address must exist in the wallet.data of this Semux node.</p>
 									</div>
 								</li>
 								<li>
@@ -1628,11 +1842,17 @@
 								<li>
 									<h5>value: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Vote amount</p>
+										<p>Number of votes in nano SEM</p>
 									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fee: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> nonce: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> validateNonce: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
@@ -1681,10 +1901,19 @@
 								<a href="semuxapi.html#createaccount" class="tsd-kind-icon">create<wbr>Account</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="semuxapi.html#deleteaccount" class="tsd-kind-icon">delete<wbr>Account</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="semuxapi.html#getaccount" class="tsd-kind-icon">get<wbr>Account</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="semuxapi.html#getaccountpendingtransactions" class="tsd-kind-icon">get<wbr>Account<wbr>Pending<wbr>Transactions</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="semuxapi.html#getaccounttransactions" class="tsd-kind-icon">get<wbr>Account<wbr>Transactions</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="semuxapi.html#getaccountvotes" class="tsd-kind-icon">get<wbr>Account<wbr>Votes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="semuxapi.html#getblockbyhash" class="tsd-kind-icon">get<wbr>Block<wbr>ByHash</a>
@@ -1715,6 +1944,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="semuxapi.html#getroot" class="tsd-kind-icon">get<wbr>Root</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="semuxapi.html#getsyncingprogress" class="tsd-kind-icon">get<wbr>Syncing<wbr>Progress</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="semuxapi.html#gettransaction" class="tsd-kind-icon">get<wbr>Transaction</a>

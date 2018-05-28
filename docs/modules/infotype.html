@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PeerType | semux-js-sdk</title>
+	<title>InfoType | semux-js-sdk</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="peertype.html">PeerType</a>
+					<a href="infotype.html">InfoType</a>
 				</li>
 			</ul>
-			<h1>Interface PeerType</h1>
+			<h1>Module InfoType</h1>
 		</div>
 	</div>
 </header>
@@ -69,35 +69,33 @@
 					<dl class="tsd-comment-tags">
 						<dt>export</dt>
 						<dd></dd>
-						<dt>interface</dt>
-						<dd><p>PeerType</p>
+						<dt>namespace</dt>
+						<dd><p>InfoType</p>
 						</dd>
 					</dl>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">PeerType</span>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section tsd-is-external">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module tsd-is-external"><a href="../enums/infotype.networkenum.html" class="tsd-kind-icon">Network<wbr>Enum</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#capabilities" class="tsd-kind-icon">capabilities</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#clientid" class="tsd-kind-icon">client<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#ip" class="tsd-kind-icon">ip</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#latency" class="tsd-kind-icon">latency</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#latestblocknumber" class="tsd-kind-icon">latest<wbr>Block<wbr>Number</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#networkversion" class="tsd-kind-icon">network<wbr>Version</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#peerid" class="tsd-kind-icon">peer<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="peertype.html#port" class="tsd-kind-icon">port</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#activepeers" class="tsd-kind-icon">active<wbr>Peers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#capabilities" class="tsd-kind-icon">capabilities</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#clientid" class="tsd-kind-icon">client<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#coinbase" class="tsd-kind-icon">coinbase</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#latestblockhash" class="tsd-kind-icon">latest<wbr>Block<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#latestblocknumber" class="tsd-kind-icon">latest<wbr>Block<wbr>Number</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#network" class="tsd-kind-icon">network</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-module tsd-is-external"><a href="infotype.html#pendingtransactions" class="tsd-kind-icon">pending<wbr>Transactions</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,13 +103,33 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
+					<a name="activepeers" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> active<wbr>Peers</h3>
+					<div class="tsd-signature tsd-kind-icon">active<wbr>Peers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L342">lib/api/api.ts:342</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>type</dt>
+							<dd><p>{number}</p>
+							</dd>
+							<dt>memberof</dt>
+							<dd><p>InfoType</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
 					<a name="capabilities" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> capabilities</h3>
 					<div class="tsd-signature tsd-kind-icon">capabilities<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L420">lib/api/api.ts:420</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L312">lib/api/api.ts:312</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -120,18 +138,18 @@
 							<dd><p>{Array&lt;string&gt;}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
 					<a name="clientid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> client<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">client<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L396">lib/api/api.ts:396</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L318">lib/api/api.ts:318</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -140,18 +158,18 @@
 							<dd><p>{string}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="ip" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> ip</h3>
-					<div class="tsd-signature tsd-kind-icon">ip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
+					<a name="coinbase" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> coinbase</h3>
+					<div class="tsd-signature tsd-kind-icon">coinbase<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L378">lib/api/api.ts:378</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L324">lib/api/api.ts:324</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -160,18 +178,18 @@
 							<dd><p>{string}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="latency" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> latency</h3>
-					<div class="tsd-signature tsd-kind-icon">latency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
+					<a name="latestblockhash" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> latest<wbr>Block<wbr>Hash</h3>
+					<div class="tsd-signature tsd-kind-icon">latest<wbr>Block<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L414">lib/api/api.ts:414</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L336">lib/api/api.ts:336</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -180,18 +198,18 @@
 							<dd><p>{string}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
 					<a name="latestblocknumber" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> latest<wbr>Block<wbr>Number</h3>
 					<div class="tsd-signature tsd-kind-icon">latest<wbr>Block<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L408">lib/api/api.ts:408</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L330">lib/api/api.ts:330</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -200,38 +218,18 @@
 							<dd><p>{string}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="networkversion" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> network<wbr>Version</h3>
-					<div class="tsd-signature tsd-kind-icon">network<wbr>Version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
+					<a name="network" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> network</h3>
+					<div class="tsd-signature tsd-kind-icon">network<span class="tsd-signature-symbol">:</span> <a href="../enums/infotype.networkenum.html" class="tsd-signature-type">NetworkEnum</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L390">lib/api/api.ts:390</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<dl class="tsd-comment-tags">
-							<dt>type</dt>
-							<dd><p>{number}</p>
-							</dd>
-							<dt>memberof</dt>
-							<dd><p>PeerType</p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="peerid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> peer<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">peer<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L402">lib/api/api.ts:402</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L306">lib/api/api.ts:306</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -240,18 +238,18 @@
 							<dd><p>{string}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a name="port" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> port</h3>
-					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-module tsd-is-external">
+					<a name="pendingtransactions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> pending<wbr>Transactions</h3>
+					<div class="tsd-signature tsd-kind-icon">pending<wbr>Transactions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L384">lib/api/api.ts:384</a></li>
+							<li>Defined in <a href="https://github.com/cryptokat/semux-js-sdk/blob/7b05137/lib/api/api.ts#L348">lib/api/api.ts:348</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -260,7 +258,7 @@
 							<dd><p>{number}</p>
 							</dd>
 							<dt>memberof</dt>
-							<dd><p>PeerType</p>
+							<dd><p>InfoType</p>
 							</dd>
 						</dl>
 					</div>
@@ -273,43 +271,46 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class="current tsd-kind-module tsd-is-external">
+						<a href="infotype.html">Info<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="pendingtransactiontype.html">Pending<wbr>Transaction<wbr>Type</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-is-external">
-						<a href="peertype.html" class="tsd-kind-icon">Peer<wbr>Type</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#capabilities" class="tsd-kind-icon">capabilities</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#clientid" class="tsd-kind-icon">client<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#ip" class="tsd-kind-icon">ip</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#latency" class="tsd-kind-icon">latency</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#latestblocknumber" class="tsd-kind-icon">latest<wbr>Block<wbr>Number</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#networkversion" class="tsd-kind-icon">network<wbr>Version</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#peerid" class="tsd-kind-icon">peer<wbr>Id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-								<a href="peertype.html#port" class="tsd-kind-icon">port</a>
-							</li>
-						</ul>
+					<li class=" tsd-kind-enum tsd-parent-kind-module tsd-is-external">
+						<a href="../enums/infotype.networkenum.html" class="tsd-kind-icon">Network<wbr>Enum</a>
 					</li>
-				</ul>
-				<ul class="after-current">
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#activepeers" class="tsd-kind-icon">active<wbr>Peers</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#capabilities" class="tsd-kind-icon">capabilities</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#clientid" class="tsd-kind-icon">client<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#coinbase" class="tsd-kind-icon">coinbase</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#latestblockhash" class="tsd-kind-icon">latest<wbr>Block<wbr>Hash</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#latestblocknumber" class="tsd-kind-icon">latest<wbr>Block<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#network" class="tsd-kind-icon">network</a>
+					</li>
+					<li class=" tsd-kind-property tsd-parent-kind-module tsd-is-external">
+						<a href="infotype.html#pendingtransactions" class="tsd-kind-icon">pending<wbr>Transactions</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

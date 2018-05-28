@@ -84,6 +84,31 @@ export interface AccountType {
      * @memberof AccountType
      */
     transactionCount?: number;
+    /**
+     *
+     * @type {number}
+     * @memberof AccountType
+     */
+    pendingTransactionCount?: number;
+}
+/**
+ *
+ * @export
+ * @interface AccountVoteType
+ */
+export interface AccountVoteType {
+    /**
+     *
+     * @type {DelegateType}
+     * @memberof AccountVoteType
+     */
+    delegate?: DelegateType;
+    /**
+     * Votes from the account
+     * @type {string}
+     * @memberof AccountVoteType
+     */
+    votes?: string;
 }
 /**
  *
@@ -141,17 +166,11 @@ export interface BlockType {
      */
     parentHash?: string;
     /**
-     *
+     * Block timestamp in milliseconds specified by the block forger. There can be a time drift up to 30 seconds.
      * @type {string}
      * @memberof BlockType
      */
     timestamp?: string;
-    /**
-     *
-     * @type {string}
-     * @memberof BlockType
-     */
-    date?: string;
     /**
      *
      * @type {string}
@@ -190,47 +209,53 @@ export interface BlockType {
  */
 export interface DelegateType {
     /**
-     *
+     * Delegate SEM address
      * @type {string}
      * @memberof DelegateType
      */
     address?: string;
     /**
-     *
+     * Delegate name
      * @type {string}
      * @memberof DelegateType
      */
     name?: string;
     /**
-     *
+     * Delegate registration block number
      * @type {string}
      * @memberof DelegateType
      */
     registeredAt?: string;
     /**
-     *
+     * Total votes of the delegate
      * @type {string}
      * @memberof DelegateType
      */
     votes?: string;
     /**
-     *
+     * Total forged blocks including primary rounds & backup rounds
      * @type {string}
      * @memberof DelegateType
      */
     blocksForged?: string;
     /**
-     *
+     * Forged blocks when the delegate is a primary validator
      * @type {string}
      * @memberof DelegateType
      */
     turnsHit?: string;
     /**
-     *
+     * Missed blocks when the delegate is a primary validator
      * @type {string}
      * @memberof DelegateType
      */
     turnsMissed?: string;
+    /**
+     * Whether the delegate is currently a validator
+     * @type {boolean}
+     * @memberof DelegateType
+     */
+    validator?: boolean;
 }
 /**
  *
@@ -238,6 +263,18 @@ export interface DelegateType {
  * @interface InfoType
  */
 export interface InfoType {
+    /**
+     *
+     * @type {string}
+     * @memberof InfoType
+     */
+    network?: InfoType.NetworkEnum;
+    /**
+     *
+     * @type {Array&lt;string&gt;}
+     * @memberof InfoType
+     */
+    capabilities?: Array<string>;
     /**
      *
      * @type {string}
@@ -274,6 +311,21 @@ export interface InfoType {
      * @memberof InfoType
      */
     pendingTransactions?: number;
+}
+/**
+ * @export
+ * @namespace InfoType
+ */
+export declare namespace InfoType {
+    /**
+     * @export
+     * @enum {string}
+     */
+    enum NetworkEnum {
+        MAINNET,
+        TESTNET,
+        DEVNET,
+    }
 }
 /**
  *
@@ -333,23 +385,134 @@ export interface PeerType {
 /**
  *
  * @export
+ * @interface PendingTransactionType
+ */
+export interface PendingTransactionType {
+    /**
+     *
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    hash?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    type?: PendingTransactionType.TypeEnum;
+    /**
+     * Sender's address
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    from?: string;
+    /**
+     * Recipient's address
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    to?: string;
+    /**
+     * Transaction value in nano SEM
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    value?: string;
+    /**
+     * Transaction fee in nano SEM
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    fee?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    nonce?: string;
+    /**
+     * Transaction timestamp in milliseconds specified by the transaction creator. There can be a time drift up to 2 hours.
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    timestamp?: string;
+    /**
+     * Transaction data encoded in hexadecimal string
+     * @type {string}
+     * @memberof PendingTransactionType
+     */
+    data?: string;
+}
+/**
+ * @export
+ * @namespace PendingTransactionType
+ */
+export declare namespace PendingTransactionType {
+    /**
+     * @export
+     * @enum {string}
+     */
+    enum TypeEnum {
+        COINBASE,
+        TRANSFER,
+        DELEGATE,
+        VOTE,
+        UNVOTE,
+        CREATE,
+        CALL,
+    }
+}
+/**
+ *
+ * @export
+ * @interface SyncingProgressType
+ */
+export interface SyncingProgressType {
+    /**
+     * Whether the node is syncing
+     * @type {boolean}
+     * @memberof SyncingProgressType
+     */
+    syncing: boolean;
+    /**
+     * The block height at which the sync started
+     * @type {string}
+     * @memberof SyncingProgressType
+     */
+    startingHeight?: string;
+    /**
+     * The current block height
+     * @type {string}
+     * @memberof SyncingProgressType
+     */
+    currentHeight?: string;
+    /**
+     * The target block height
+     * @type {string}
+     * @memberof SyncingProgressType
+     */
+    targetHeight?: string;
+}
+/**
+ *
+ * @export
  * @interface TransactionLimitsType
  */
 export interface TransactionLimitsType {
     /**
-     *
+     * The maximum transaction size in bytes
      * @type {number}
      * @memberof TransactionLimitsType
      */
     maxTransactionDataSize?: number;
     /**
-     *
+     * The minimum transaction fee in nano SEM
      * @type {string}
      * @memberof TransactionLimitsType
      */
     minTransactionFee?: string;
     /**
-     *
+     * The amount of nano SEM required to burn for delegate registration
      * @type {string}
      * @memberof TransactionLimitsType
      */
@@ -378,27 +541,27 @@ export interface TransactionType {
      * @type {string}
      * @memberof TransactionType
      */
-    type?: string;
+    type?: TransactionType.TypeEnum;
     /**
-     *
+     * Sender's address
      * @type {string}
      * @memberof TransactionType
      */
     from?: string;
     /**
-     *
+     * Recipient's address
      * @type {string}
      * @memberof TransactionType
      */
     to?: string;
     /**
-     *
+     * Transaction value in nano SEM
      * @type {string}
      * @memberof TransactionType
      */
     value?: string;
     /**
-     *
+     * Transaction fee in nano SEM
      * @type {string}
      * @memberof TransactionType
      */
@@ -410,17 +573,36 @@ export interface TransactionType {
      */
     nonce?: string;
     /**
-     *
+     * Transaction timestamp in milliseconds specified by the transaction creator. There can be a time drift up to 2 hours.
      * @type {string}
      * @memberof TransactionType
      */
     timestamp?: string;
     /**
-     *
+     * Transaction data encoded in hexadecimal string
      * @type {string}
      * @memberof TransactionType
      */
     data?: string;
+}
+/**
+ * @export
+ * @namespace TransactionType
+ */
+export declare namespace TransactionType {
+    /**
+     * @export
+     * @enum {string}
+     */
+    enum TypeEnum {
+        COINBASE,
+        TRANSFER,
+        DELEGATE,
+        VOTE,
+        UNVOTE,
+        CREATE,
+        CALL,
+    }
 }
 /**
  *
@@ -436,7 +618,7 @@ export interface AddNodeResponse extends ApiHandlerResponse {
  */
 export interface ComposeRawTransactionResponse extends ApiHandlerResponse {
     /**
-     *
+     * The composed raw transaction encoded in hexadecimal string
      * @type {string}
      * @memberof ComposeRawTransactionResponse
      */
@@ -458,6 +640,13 @@ export interface CreateAccountResponse extends ApiHandlerResponse {
 /**
  *
  * @export
+ * @interface DeleteAccountResponse
+ */
+export interface DeleteAccountResponse extends ApiHandlerResponse {
+}
+/**
+ *
+ * @export
  * @interface DoTransactionResponse
  */
 export interface DoTransactionResponse extends ApiHandlerResponse {
@@ -467,6 +656,19 @@ export interface DoTransactionResponse extends ApiHandlerResponse {
      * @memberof DoTransactionResponse
      */
     result?: string;
+}
+/**
+ *
+ * @export
+ * @interface GetAccountPendingTransactionsResponse
+ */
+export interface GetAccountPendingTransactionsResponse extends ApiHandlerResponse {
+    /**
+     *
+     * @type {Array&lt;PendingTransactionType&gt;}
+     * @memberof GetAccountPendingTransactionsResponse
+     */
+    result?: Array<PendingTransactionType>;
 }
 /**
  *
@@ -493,6 +695,19 @@ export interface GetAccountTransactionsResponse extends ApiHandlerResponse {
      * @memberof GetAccountTransactionsResponse
      */
     result?: Array<TransactionType>;
+}
+/**
+ *
+ * @export
+ * @interface GetAccountVotesResponse
+ */
+export interface GetAccountVotesResponse extends ApiHandlerResponse {
+    /**
+     *
+     * @type {Array&lt;AccountVoteType&gt;}
+     * @memberof GetAccountVotesResponse
+     */
+    result?: Array<AccountVoteType>;
 }
 /**
  *
@@ -593,10 +808,10 @@ export interface GetPeersResponse extends ApiHandlerResponse {
 export interface GetPendingTransactionsResponse extends ApiHandlerResponse {
     /**
      *
-     * @type {Array&lt;TransactionType&gt;}
+     * @type {Array&lt;PendingTransactionType&gt;}
      * @memberof GetPendingTransactionsResponse
      */
-    result?: Array<TransactionType>;
+    result?: Array<PendingTransactionType>;
 }
 /**
  *
@@ -604,6 +819,19 @@ export interface GetPendingTransactionsResponse extends ApiHandlerResponse {
  * @interface GetRootResponse
  */
 export interface GetRootResponse extends ApiHandlerResponse {
+}
+/**
+ *
+ * @export
+ * @interface GetSyncingProgressResponse
+ */
+export interface GetSyncingProgressResponse extends ApiHandlerResponse {
+    /**
+     *
+     * @type {SyncingProgressType}
+     * @memberof GetSyncingProgressResponse
+     */
+    result: SyncingProgressType;
 }
 /**
  *
@@ -638,7 +866,7 @@ export interface GetTransactionResponse extends ApiHandlerResponse {
  */
 export interface GetValidatorsResponse extends ApiHandlerResponse {
     /**
-     *
+     * A list of validator addresses
      * @type {Array&lt;string&gt;}
      * @memberof GetValidatorsResponse
      */
@@ -664,7 +892,7 @@ export interface GetVoteResponse extends ApiHandlerResponse {
  */
 export interface GetVotesResponse extends ApiHandlerResponse {
     /**
-     *
+     * A map of [voter address] => [votes]
      * @type {{ [key: string]: string; }}
      * @memberof GetVotesResponse
      */
@@ -679,7 +907,7 @@ export interface GetVotesResponse extends ApiHandlerResponse {
  */
 export interface ListAccountsResponse extends ApiHandlerResponse {
     /**
-     *
+     * A list of account addresses
      * @type {Array&lt;string&gt;}
      * @memberof ListAccountsResponse
      */
@@ -688,18 +916,11 @@ export interface ListAccountsResponse extends ApiHandlerResponse {
 /**
  *
  * @export
- * @interface SendTransactionResponse
- */
-export interface SendTransactionResponse extends ApiHandlerResponse {
-}
-/**
- *
- * @export
  * @interface SignMessageResponse
  */
 export interface SignMessageResponse extends ApiHandlerResponse {
     /**
-     *
+     * The message signature encoded in hexadecimal string
      * @type {string}
      * @memberof SignMessageResponse
      */
@@ -712,7 +933,7 @@ export interface SignMessageResponse extends ApiHandlerResponse {
  */
 export interface SignRawTransactionResponse extends ApiHandlerResponse {
     /**
-     *
+     * The signed raw transaction encoded in hexadecimal string
      * @type {string}
      * @memberof SignRawTransactionResponse
      */
@@ -725,7 +946,7 @@ export interface SignRawTransactionResponse extends ApiHandlerResponse {
  */
 export interface VerifyMessageResponse extends ApiHandlerResponse {
     /**
-     *
+     * Whether the signature is valid
      * @type {boolean}
      * @memberof VerifyMessageResponse
      */
@@ -739,11 +960,14 @@ export declare const SemuxApiFetchParamCreator: (configuration?: Configuration) 
     addNode(node: string, options?: any): FetchArgs;
     addToBlacklist(ip: string, options?: any): FetchArgs;
     addToWhitelist(ip: string, options?: any): FetchArgs;
-    broadcastRawTransaction(raw: string, options?: any): FetchArgs;
+    broadcastRawTransaction(raw: string, validateNonce?: boolean, options?: any): FetchArgs;
     composeRawTransaction(network: string, type: string, fee: string, nonce: string, to?: string, value?: string, timestamp?: string, data?: string, options?: any): FetchArgs;
-    createAccount(name?: string, options?: any): FetchArgs;
+    createAccount(name?: string, privateKey?: string, options?: any): FetchArgs;
+    deleteAccount(address: string, options?: any): FetchArgs;
     getAccount(address: string, options?: any): FetchArgs;
+    getAccountPendingTransactions(address: string, from: string, to: string, options?: any): FetchArgs;
     getAccountTransactions(address: string, from: string, to: string, options?: any): FetchArgs;
+    getAccountVotes(address: string, options?: any): FetchArgs;
     getBlockByHash(hash: string, options?: any): FetchArgs;
     getBlockByNumber(number: string, options?: any): FetchArgs;
     getDelegate(address: string, options?: any): FetchArgs;
@@ -754,19 +978,20 @@ export declare const SemuxApiFetchParamCreator: (configuration?: Configuration) 
     getPeers(options?: any): FetchArgs;
     getPendingTransactions(options?: any): FetchArgs;
     getRoot(options?: any): FetchArgs;
+    getSyncingProgress(options?: any): FetchArgs;
     getTransaction(hash: string, options?: any): FetchArgs;
     getTransactionLimits(type: string, options?: any): FetchArgs;
     getValidators(options?: any): FetchArgs;
     getVote(delegate: string, voter: string, options?: any): FetchArgs;
     getVotes(delegate: string, options?: any): FetchArgs;
     listAccounts(options?: any): FetchArgs;
-    registerDelegate(from: string, data: string, fee?: string, options?: any): FetchArgs;
+    registerDelegate(from: string, data: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): FetchArgs;
     signMessage(address: string, message: string, options?: any): FetchArgs;
     signRawTransaction(raw: string, address: string, options?: any): FetchArgs;
-    transfer(from: string, to: string, value: string, fee?: string, data?: string, options?: any): FetchArgs;
-    unvote(from: string, to: string, value: string, fee?: string, options?: any): FetchArgs;
+    transfer(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, data?: string, options?: any): FetchArgs;
+    unvote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): FetchArgs;
     verifyMessage(address: string, message: string, signature: string, options?: any): FetchArgs;
-    vote(from: string, to: string, value: string, fee?: string, options?: any): FetchArgs;
+    vote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): FetchArgs;
 };
 /**
  * SemuxApi - functional programming interface
@@ -776,11 +1001,14 @@ export declare const SemuxApiFp: (configuration?: Configuration) => {
     addNode(node: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AddNodeResponse>;
     addToBlacklist(ip: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiHandlerResponse>;
     addToWhitelist(ip: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiHandlerResponse>;
-    broadcastRawTransaction(raw: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SendTransactionResponse>;
+    broadcastRawTransaction(raw: string, validateNonce?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
     composeRawTransaction(network: string, type: string, fee: string, nonce: string, to?: string, value?: string, timestamp?: string, data?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ComposeRawTransactionResponse>;
-    createAccount(name?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CreateAccountResponse>;
+    createAccount(name?: string, privateKey?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<CreateAccountResponse>;
+    deleteAccount(address: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DeleteAccountResponse>;
     getAccount(address: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetAccountResponse>;
+    getAccountPendingTransactions(address: string, from: string, to: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetAccountPendingTransactionsResponse>;
     getAccountTransactions(address: string, from: string, to: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetAccountTransactionsResponse>;
+    getAccountVotes(address: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetAccountVotesResponse>;
     getBlockByHash(hash: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetBlockResponse>;
     getBlockByNumber(number: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetBlockResponse>;
     getDelegate(address: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetDelegateResponse>;
@@ -791,19 +1019,20 @@ export declare const SemuxApiFp: (configuration?: Configuration) => {
     getPeers(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetPeersResponse>;
     getPendingTransactions(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetPendingTransactionsResponse>;
     getRoot(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetRootResponse>;
+    getSyncingProgress(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetSyncingProgressResponse>;
     getTransaction(hash: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetTransactionResponse>;
     getTransactionLimits(type: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetTransactionLimitsResponse>;
     getValidators(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetValidatorsResponse>;
     getVote(delegate: string, voter: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetVoteResponse>;
     getVotes(delegate: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetVotesResponse>;
     listAccounts(options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ListAccountsResponse>;
-    registerDelegate(from: string, data: string, fee?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
+    registerDelegate(from: string, data: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
     signMessage(address: string, message: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignMessageResponse>;
     signRawTransaction(raw: string, address: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<SignRawTransactionResponse>;
-    transfer(from: string, to: string, value: string, fee?: string, data?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
-    unvote(from: string, to: string, value: string, fee?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
+    transfer(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, data?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
+    unvote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
     verifyMessage(address: string, message: string, signature: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<VerifyMessageResponse>;
-    vote(from: string, to: string, value: string, fee?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
+    vote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<DoTransactionResponse>;
 };
 /**
  * SemuxApi - factory interface
@@ -813,11 +1042,14 @@ export declare const SemuxApiFactory: (configuration?: Configuration, fetch?: Fe
     addNode(node: string, options?: any): Promise<AddNodeResponse>;
     addToBlacklist(ip: string, options?: any): Promise<ApiHandlerResponse>;
     addToWhitelist(ip: string, options?: any): Promise<ApiHandlerResponse>;
-    broadcastRawTransaction(raw: string, options?: any): Promise<SendTransactionResponse>;
+    broadcastRawTransaction(raw: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
     composeRawTransaction(network: string, type: string, fee: string, nonce: string, to?: string, value?: string, timestamp?: string, data?: string, options?: any): Promise<ComposeRawTransactionResponse>;
-    createAccount(name?: string, options?: any): Promise<CreateAccountResponse>;
+    createAccount(name?: string, privateKey?: string, options?: any): Promise<CreateAccountResponse>;
+    deleteAccount(address: string, options?: any): Promise<DeleteAccountResponse>;
     getAccount(address: string, options?: any): Promise<GetAccountResponse>;
+    getAccountPendingTransactions(address: string, from: string, to: string, options?: any): Promise<GetAccountPendingTransactionsResponse>;
     getAccountTransactions(address: string, from: string, to: string, options?: any): Promise<GetAccountTransactionsResponse>;
+    getAccountVotes(address: string, options?: any): Promise<GetAccountVotesResponse>;
     getBlockByHash(hash: string, options?: any): Promise<GetBlockResponse>;
     getBlockByNumber(number: string, options?: any): Promise<GetBlockResponse>;
     getDelegate(address: string, options?: any): Promise<GetDelegateResponse>;
@@ -828,19 +1060,20 @@ export declare const SemuxApiFactory: (configuration?: Configuration, fetch?: Fe
     getPeers(options?: any): Promise<GetPeersResponse>;
     getPendingTransactions(options?: any): Promise<GetPendingTransactionsResponse>;
     getRoot(options?: any): Promise<GetRootResponse>;
+    getSyncingProgress(options?: any): Promise<GetSyncingProgressResponse>;
     getTransaction(hash: string, options?: any): Promise<GetTransactionResponse>;
     getTransactionLimits(type: string, options?: any): Promise<GetTransactionLimitsResponse>;
     getValidators(options?: any): Promise<GetValidatorsResponse>;
     getVote(delegate: string, voter: string, options?: any): Promise<GetVoteResponse>;
     getVotes(delegate: string, options?: any): Promise<GetVotesResponse>;
     listAccounts(options?: any): Promise<ListAccountsResponse>;
-    registerDelegate(from: string, data: string, fee?: string, options?: any): Promise<DoTransactionResponse>;
+    registerDelegate(from: string, data: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
     signMessage(address: string, message: string, options?: any): Promise<SignMessageResponse>;
     signRawTransaction(raw: string, address: string, options?: any): Promise<SignRawTransactionResponse>;
-    transfer(from: string, to: string, value: string, fee?: string, data?: string, options?: any): Promise<DoTransactionResponse>;
-    unvote(from: string, to: string, value: string, fee?: string, options?: any): Promise<DoTransactionResponse>;
+    transfer(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, data?: string, options?: any): Promise<DoTransactionResponse>;
+    unvote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
     verifyMessage(address: string, message: string, signature: string, options?: any): Promise<VerifyMessageResponse>;
-    vote(from: string, to: string, value: string, fee?: string, options?: any): Promise<DoTransactionResponse>;
+    vote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
 };
 /**
  * SemuxApi - object-oriented interface
@@ -852,7 +1085,7 @@ export declare class SemuxApi extends BaseAPI {
     /**
      * Adds a node to node manager.
      * @summary Add node
-     * @param {} node Name of the node in host:port format
+     * @param {} node Address of the node in host:port format
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
@@ -879,12 +1112,13 @@ export declare class SemuxApi extends BaseAPI {
     /**
      * Broadcasts a raw transaction to the network.
      * @summary Broadcast a raw transaction
-     * @param {} raw Raw transaction
+     * @param {} raw Raw transaction encoded in hexadecimal string.
+     * @param {} [validateNonce] Whether to validate tx nonce against the current account state, default to false if omitted
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
      */
-    broadcastRawTransaction(raw: string, options?: any): Promise<SendTransactionResponse>;
+    broadcastRawTransaction(raw: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
     /**
      * Compose an unsigned raw transaction then return its hexadecimal encoded string. An unsigned raw transaction can be signed using /sign-raw-transaction API.
      * @summary Compose an unsigned raw transaction
@@ -893,7 +1127,7 @@ export declare class SemuxApi extends BaseAPI {
      * @param {} fee Transaction fee in nano
      * @param {} nonce Transaction nonce
      * @param {} [to] Recipient&#39;s address
-     * @param {} [value] Transaction value in nano
+     * @param {} [value] Transaction value in nano SEM
      * @param {} [timestamp] Transaction timestamp in milliseconds. Default to current time.
      * @param {} [data] Hexadecimal encoded transaction data.
      * @param {*} [options] Override http request option.
@@ -902,14 +1136,24 @@ export declare class SemuxApi extends BaseAPI {
      */
     composeRawTransaction(network: string, type: string, fee: string, nonce: string, to?: string, value?: string, timestamp?: string, data?: string, options?: any): Promise<ComposeRawTransactionResponse>;
     /**
-     * Creates a new account.
-     * @summary Create account
+     * Creates a new account by generating a new private key or importing an existing private key when parameter 'privateKey' is provided.
+     * @summary Create or import an account
      * @param {} [name] Assigned alias to the created account.
+     * @param {} [privateKey] The private key to be imported, create a new key if omitted
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
      */
-    createAccount(name?: string, options?: any): Promise<CreateAccountResponse>;
+    createAccount(name?: string, privateKey?: string, options?: any): Promise<CreateAccountResponse>;
+    /**
+     * Deletes an account from this wallet.
+     * @summary Delete account
+     * @param {} address Address of the account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SemuxApi
+     */
+    deleteAccount(address: string, options?: any): Promise<DeleteAccountResponse>;
     /**
      * Returns an account.
      * @summary Get account
@@ -919,6 +1163,17 @@ export declare class SemuxApi extends BaseAPI {
      * @memberof SemuxApi
      */
     getAccount(address: string, options?: any): Promise<GetAccountResponse>;
+    /**
+     * Returns pending transactions from/to an account.
+     * @summary Get pending transactions of the account
+     * @param {} address Address of account
+     * @param {} from Starting range of transactions
+     * @param {} to Ending range of transactions
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SemuxApi
+     */
+    getAccountPendingTransactions(address: string, from: string, to: string, options?: any): Promise<GetAccountPendingTransactionsResponse>;
     /**
      * Returns transactions from/to an account.
      * @summary Get account transactions
@@ -930,6 +1185,15 @@ export declare class SemuxApi extends BaseAPI {
      * @memberof SemuxApi
      */
     getAccountTransactions(address: string, from: string, to: string, options?: any): Promise<GetAccountTransactionsResponse>;
+    /**
+     * Returns votes from the account.
+     * @summary Get account votes
+     * @param {} address Address of account
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SemuxApi
+     */
+    getAccountVotes(address: string, options?: any): Promise<GetAccountVotesResponse>;
     /**
      * Returns a block by block hash.
      * @summary Get block by hash
@@ -1014,6 +1278,14 @@ export declare class SemuxApi extends BaseAPI {
      */
     getRoot(options?: any): Promise<GetRootResponse>;
     /**
+     * Returns an object with data about the sync status
+     * @summary Get syncing progress
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SemuxApi
+     */
+    getSyncingProgress(options?: any): Promise<GetSyncingProgressResponse>;
+    /**
      * Returns a transactions if exists.
      * @summary Get transaction
      * @param {} hash Transaction hash
@@ -1023,7 +1295,7 @@ export declare class SemuxApi extends BaseAPI {
      */
     getTransaction(hash: string, options?: any): Promise<GetTransactionResponse>;
     /**
-     * Get minimum fee and maximum size.
+     * Returns transaction limitations including minimum transaction fee and maximum transaction size.
      * @summary Get transaction limits
      * @param {} type Type of transaction
      * @param {*} [options] Override http request option.
@@ -1032,7 +1304,7 @@ export declare class SemuxApi extends BaseAPI {
      */
     getTransactionLimits(type: string, options?: any): Promise<GetTransactionLimitsResponse>;
     /**
-     * Returns a list of validators.
+     * Returns a list of validators in Semux addresses.
      * @summary Get validators
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1050,8 +1322,8 @@ export declare class SemuxApi extends BaseAPI {
      */
     getVote(delegate: string, voter: string, options?: any): Promise<GetVoteResponse>;
     /**
-     * Returns all the votes to a delegate
-     * @summary Get votes
+     * Returns all the votes to a delegate as a map of [voter address] => [votes]
+     * @summary Get a delegate's votes
      * @param {} delegate Delegate address
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1070,18 +1342,20 @@ export declare class SemuxApi extends BaseAPI {
      * Registers as a delegate
      * @summary Register delegate
      * @param {} from Registering address
-     * @param {} data Delegate name
-     * @param {} [fee] Transaction fee
+     * @param {} data Delegate name in hexadecimal encoded UTF-8 string, 16 bytes of data at maximum
+     * @param {} [fee] Transaction fee in nano SEM, default to minimum fee if omitted
+     * @param {} [nonce] Transaction nonce, default to sender&#39;s nonce if omitted
+     * @param {} [validateNonce] Whether validate tx nonce against the current account state, default to false if omitted
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
      */
-    registerDelegate(from: string, data: string, fee?: string, options?: any): Promise<DoTransactionResponse>;
+    registerDelegate(from: string, data: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
     /**
      * Sign a message.
      * @summary Sign a message
-     * @param {} address Signing address
-     * @param {} message Message to sign
+     * @param {} address Signing address. The address must exist in the wallet.data of this Semux node.
+     * @param {} message Message to sign in UTF-8 string
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
@@ -1100,33 +1374,37 @@ export declare class SemuxApi extends BaseAPI {
     /**
      * Transfers coins to another address.
      * @summary Transfer coins
-     * @param {} from Sending address
-     * @param {} to Receiving address
-     * @param {} value Amount of SEM to transfer
-     * @param {} [fee] Transaction fee
-     * @param {} [data] Transaction data
+     * @param {} from Sender&#39;s address. The address must exist in the wallet.data of this Semux node.
+     * @param {} to Recipient&#39;s address
+     * @param {} value Amount of SEM to transfer in nano SEM
+     * @param {} [fee] Transaction fee in nano SEM, default to minimum fee if omitted
+     * @param {} [nonce] Transaction nonce, default to sender&#39;s nonce if omitted
+     * @param {} [validateNonce] Whether validate tx nonce against the current account state, default to false if omitted
+     * @param {} [data] Transaction data encoded in hexadecimal string
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
      */
-    transfer(from: string, to: string, value: string, fee?: string, data?: string, options?: any): Promise<DoTransactionResponse>;
+    transfer(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, data?: string, options?: any): Promise<DoTransactionResponse>;
     /**
      * Unvotes for a delegate.
      * @summary Unvote
-     * @param {} from Voting address
+     * @param {} from Voter&#39;s address. The address must exist in the wallet.data of this Semux node.
      * @param {} to Delegate address
-     * @param {} value Vote amount
-     * @param {} [fee] Transaction fee
+     * @param {} value Number of votes in nano SEM
+     * @param {} [fee] Transaction fee in nano SEM, default to minimum fee if omitted
+     * @param {} [nonce] Transaction nonce, default to sender&#39;s nonce if omitted
+     * @param {} [validateNonce] Whether validate tx nonce against the current account state, default to false if omitted
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
      */
-    unvote(from: string, to: string, value: string, fee?: string, options?: any): Promise<DoTransactionResponse>;
+    unvote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
     /**
      * Verify a signed message.
      * @summary Verify a message
-     * @param {} address Address
-     * @param {} message Message
+     * @param {} address Address of the message signer
+     * @param {} message Message in UTF-8 string
      * @param {} signature Signature to verify
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1136,13 +1414,15 @@ export declare class SemuxApi extends BaseAPI {
     /**
      * Votes for a delegate.
      * @summary Vote
-     * @param {} from Voting address
+     * @param {} from Voter&#39;s address. The address must exist in the wallet.data of this Semux node.
      * @param {} to Delegate address
-     * @param {} value Vote amount
-     * @param {} [fee] Transaction fee
+     * @param {} value Number of votes in nano SEM
+     * @param {} [fee] Transaction fee in nano SEM, default to minimum fee if omitted
+     * @param {} [nonce] Transaction nonce, default to sender&#39;s nonce if omitted
+     * @param {} [validateNonce] Whether validate tx nonce against the current account state, default to false if omitted
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SemuxApi
      */
-    vote(from: string, to: string, value: string, fee?: string, options?: any): Promise<DoTransactionResponse>;
+    vote(from: string, to: string, value: string, fee?: string, nonce?: string, validateNonce?: boolean, options?: any): Promise<DoTransactionResponse>;
 }
