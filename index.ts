@@ -14,10 +14,28 @@ import SimpleEncoder from "./lib/SimpleEncoder";
 import Transaction from "./lib/Transaction";
 import TransactionType from "./lib/TransactionType";
 
-// export Semux module
+// typescript export
 export {
   SemuxApi,
   Configuration as SemuxApiConfiguration,
+  Bytes,
+  Cast,
+  Constants,
+  Hash,
+  Key,
+  KeyCodec,
+  Network,
+  Signature,
+  SimpleDecoder,
+  SimpleEncoder,
+  Transaction,
+  TransactionType,
+};
+
+// commonjs export
+module.exports = {
+  SemuxApi,
+  SemuxApiConfiguration: Configuration,
   Bytes,
   Cast,
   Constants,

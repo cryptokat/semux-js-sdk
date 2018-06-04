@@ -82,7 +82,7 @@
 				<h2 id="install">Install</h2>
 				<pre><code>npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save semux</span>
 </code></pre><h2 id="getting-started">Getting Started</h2>
-				<p><strong>Node.js</strong></p>
+				<p><strong>Node.js - API Client</strong></p>
 				<pre><code class="lang-javascript"><span class="hljs-comment">// import semux module</span>
 <span class="hljs-keyword">const</span> {SemuxApi, SemuxApiConfiguration} = <span class="hljs-built_in">require</span>(<span class="hljs-string">"semux"</span>);
 
@@ -98,6 +98,21 @@ api
   .getInfo({ <span class="hljs-attr">mode</span>: <span class="hljs-string">'cors'</span>, <span class="hljs-attr">credentials</span>: <span class="hljs-string">'include'</span> })
   .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(response))
   .catch(<span class="hljs-function"><span class="hljs-params">err</span> =&gt;</span> <span class="hljs-built_in">console</span>.error(err));
+</code></pre>
+				<p><strong>Typescript - Key Pair Generator</strong></p>
+				<pre><code class="lang-typescript"><span class="hljs-comment">// import semux module</span>
+<span class="hljs-keyword">import</span> {Key} <span class="hljs-keyword">from</span> <span class="hljs-string">'semux'</span>;
+<span class="hljs-keyword">import</span> {Buffer} <span class="hljs-keyword">from</span> <span class="hljs-string">'buffer'</span>;
+
+<span class="hljs-comment">// generate a key pair</span>
+<span class="hljs-keyword">const</span> key : Key = Key.generateKeyPair();
+
+<span class="hljs-comment">// print the generated key pair</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Address: 0x<span class="hljs-subst">${key.toAddressHexString()}</span>`</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Private Key: 0x<span class="hljs-subst">${Buffer.from(key.getEncodedPrivateKey().buffer).toString("hex")}</span>`</span>);
+</code></pre>
+				<p><em>Typescript Compile</em></p>
+				<pre><code class="lang-bash">tsc --esModuleInterop test.ts
 </code></pre>
 				<h2 id="usage">Usage</h2>
 				<ul>

@@ -25,6 +25,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
+    "diagnostics": true,
     "typeRoots": ["node_modules/@types", "types"],
     "lib": ["es2015", "es2016", "dom", "scripthost"]
   }

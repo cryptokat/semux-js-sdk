@@ -20565,6 +20565,24 @@ function hashTx(tx) {
     return Hash.h256(encodeTx(tx));
 }
 
+// commonjs export
+module.exports = {
+    SemuxApi: SemuxApi,
+    SemuxApiConfiguration: Configuration,
+    Bytes: Bytes,
+    Cast: Cast,
+    Constants: Constants,
+    Hash: Hash,
+    Key: Key,
+    KeyCodec: KeyCodec,
+    Network: Network,
+    Signature: Signature,
+    SimpleDecoder: SimpleDecoder,
+    SimpleEncoder: SimpleEncoder,
+    Transaction: Transaction,
+    TransactionType: TransactionType$1,
+};
+
 exports.SemuxApi = SemuxApi;
 exports.SemuxApiConfiguration = Configuration;
 exports.Bytes = Bytes;

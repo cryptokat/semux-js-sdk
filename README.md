@@ -27,7 +27,7 @@ npm install --save semux
 
 ## Getting Started
 
-**Node.js**
+**Node.js - API Client**
 
 ```javascript
 // import semux module
@@ -45,6 +45,27 @@ api
   .getInfo({ mode: 'cors', credentials: 'include' })
   .then(response => console.log(response))
   .catch(err => console.error(err));
+```
+
+**Typescript - Key Pair Generator**
+
+```typescript
+// import semux module
+import {Key} from 'semux';
+import {Buffer} from 'buffer';
+
+// generate a key pair
+const key : Key = Key.generateKeyPair();
+
+// print the generated key pair
+console.log(`Address: 0x${key.toAddressHexString()}`);
+console.log(`Private Key: 0x${Buffer.from(key.getEncodedPrivateKey().buffer).toString("hex")}`);
+```
+
+*Typescript Compile*
+
+```bash
+tsc --esModuleInterop test.ts
 ```
 
 ## Usage
