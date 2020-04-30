@@ -26,7 +26,9 @@
     "test:coverage": "cross-env-shell \"npm run build:test && nyc mocha --opts mocha.opts test/index.js\"",
     "format": "cross-env-shell \"tslint --project . --fix\"",
     "format:check": "cross-env-shell \"tslint --project .\"",
-    "release": "npm run format:check && npm run build:swagger && npm run build && npm run build:docs"
+    "release": "npm run format:check && npm run build:swagger && npm run build && npm run build:docs",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -54,7 +56,8 @@
     "ripemd160": "^2.0.2",
     "tweetnacl": "^1.0.0",
     "unfetch": "^3.0.0",
-    "xmlhttprequest": "^1.8.0"
+    "xmlhttprequest": "^1.8.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.2",
@@ -142,5 +145,6 @@
       "lib/**/*.spec.ts"
     ],
     "all": true
-  }
+  },
+  "snyk": true
 }
